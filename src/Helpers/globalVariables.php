@@ -2,7 +2,7 @@
 
 //use App\Services\LicenseService;
 use LicenseClient\Services\LicenseService;
-use App\Models\License;
+use LicenseClient\Models\License;
 use Illuminate\Support\Facades\File;
 
 // --- Paths ---

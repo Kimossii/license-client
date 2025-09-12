@@ -1,13 +1,12 @@
 <?php
-//namespace App\Services;
+
 namespace LicenseClient\Services;
 use Carbon\Carbon;
-//use App\Helpers\LicenseHelper;
 use LicenseClient\Helpers\LicenseHelper;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\UploadedFile;
-//use App\Models\License;
+
 use LicenseClient\Models\License;
 require_once base_path('vendor/eluki/license-client/src/Helpers/globalVariables.php');
 require_once base_path('vendor/eluki/license-client/src/Helpers/HardwareHelper.php');
@@ -17,18 +16,18 @@ class LicenseService
 {
     public function uploadPublicKey(UploadedFile $file, bool $overwrite = false): array
     {
-        $path = $this->getStorageKeys(); // ou crie getStorageKeys() no serviço
+        $path = $this->getStorageKeys(); 
 
         if (!File::exists($path)) {
             File::makeDirectory($path, 0755, true);
         } elseif (File::exists($path . '/public.pem') && !$overwrite) {
-            //write_Clientlicense_log("Chave pública já existe. Marque para substituir.");
+           
             write_Clientlicense_log("Chave pública já existe. Marque para substituir.");
             return ['success' => false, 'message' => 'Chave pública já existe. Marque para substituir.'];
         }
 
         $file->move($path, 'public.pem');
-        // write_Clientlicense_log("Chave pública enviada com sucesso!");
+      
         write_Clientlicense_log("Chave pública enviada com sucesso");
         return ['success' => true, 'message' => 'Chave pública enviada com sucesso!'];
     }

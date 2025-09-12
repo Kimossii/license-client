@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\Models\License;
+use LicenseClient\Models\License;
 use Carbon\Carbon;
 
 class CheckLicense
