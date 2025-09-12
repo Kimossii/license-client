@@ -148,7 +148,8 @@ license-client/
 - Lembre-se de manter as chaves (APP_KEY e chave pública) seguras e consistentes entre os ambientes.
 
 > ⚠️ **Dica de Depuração:**  
-> Em caso de qualquer erro ou exceção, verifique os arquivos de log em `logs/ClientLicense.log` ou `logs/license_server.log` para mais detalhes.
+> Em caso de erro ou exceção, verifique os arquivos de log em `logs/ClientLicense.log` ou `logs/license_server.log` para mais detalhes.  
+> Por padrão, ao ativar a licença, o sistema tenta redirecionar para a rota com nome `index`. Certifique-se de que essa rota exista ou ajuste conforme necessário.
 
 
 
