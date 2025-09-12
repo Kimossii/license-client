@@ -63,6 +63,7 @@ protected $routeMiddleware = [
 Inclua as rotas que precisam de validação de licença dentro do middleware:
 
 ```php
+use LicenseClient\Http\Controllers\LicenseController;
 Route::middleware('license.check')->group(function () {
     Route::get('/activate', [LicenseController::class, 'activateForm'])->name('license.activate.form');
     Route::post('/activate', [LicenseController::class, 'activate'])->name('license.activate');
@@ -145,6 +146,9 @@ license-client/
 
 - Utilize cada pacote (License Client e License Server) conforme a necessidade do seu projeto.
 - Lembre-se de manter as chaves (APP_KEY e chave pública) seguras e consistentes entre os ambientes.
+
+> ⚠️ **Dica de Depuração:**  
+> Em caso de qualquer erro ou exceção, verifique os arquivos de log em `logs/ClientLicense.log` ou `logs/license_server.log` para mais detalhes.
 
 
 
