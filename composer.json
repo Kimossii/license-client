@@ -1,0 +1,24 @@
+{
+    "name": "eluki/license-client",
+    "description": "Pacote Cliente de licenças",
+    "version": "1.0.0",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "LicenseClient\\": "src/"
+        },
+        "files": [
+            "src/Helpers/HardwareHelper.php",
+            "src/Helpers/globalVariables.php",
+            "src/Helpers/LicenseHelper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LicenseClient\\ClientServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}
