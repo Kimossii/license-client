@@ -51,9 +51,12 @@ php artisan migrate --path=database/migrations/vendor/license-server
 Adicione o middleware no Kernel da aplicação (`app/Http/Kernel.php`) ou no Bootstrap/App para versões recentes do Laravel:
 
 ```php
-protected $routeMiddleware = [
-    'license.check' => \LicenseClient\Http\Middleware\LicenseCheck::class,
-];
+ ->withMiddleware(function (Middleware $middleware): void {
+        //Adiconando middleware aqui
+        $middleware->alias([
+            'license.check' => \LicenseClient\Http\Middleware\LicenseCheck::class,
+        ]);
+    })
 ```
 
 ---
