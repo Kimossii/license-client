@@ -1,4 +1,8 @@
 # 🛡️ License Client for Laravel
+# License Server for Laravel  
+[![Latest Stable Version](https://img.shields.io/packagist/v/eluki/license-server.svg)](https://packagist.org/packages/eluki/license-server)  
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
+
 
 > **Valide, proteja e gerencie licenças de software em sua aplicação Laravel com facilidade e segurança.**
 
@@ -124,7 +128,11 @@ license-client/
 ```
 
 ---
+## 📦 Ecossistema
+- [License Server](https://github.com/Kimossii/license-server) → Gerencia e emite licenças  
+- [License Client](https://github.com/Kimossii/license-client) → Valida licenças no lado do cliente
 
+---
 ## 🔐 Boas Práticas de Segurança
 
 - Proteja rotas críticas com o middleware `license.check`
@@ -153,6 +161,12 @@ license-client/
 > ⚠️ **Dica de Depuração:**  
 > Em caso de erro ou exceção, verifique os arquivos de log em `logs/ClientLicense.log` ou `logs/license_server.log` para mais detalhes.  
 > Por padrão, ao ativar a licença, o sistema tenta redirecionar para a rota com nome `index`. Certifique-se de que essa rota exista ou ajuste conforme necessário.
+
+## 📖 Documentação Completa
+Para detalhes mais avançados, acesse a documentação em PDF:
+
+👉 [Abrir Documentação ](https://drive.google.com/file/d/SEU_ID_DO_ARQUIVO/view?usp=sharing)
+
 
 
 

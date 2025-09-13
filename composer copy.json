@@ -1,15 +1,8 @@
 {
     "name": "eluki/license-client",
-    "description": "Pacote Cliente para gerenciamento e validação de licenças de software em Laravel",
+    "description": "Pacote Cliente de licenças",
     "version": "1.0.0",
     "type": "library",
-    "license": "MIT",
-    "keywords": ["laravel", "license", "licensing", "license-manager", "activation", "php", "laravel-package"],
-    "homepage": "https://github.com/Kimossii/license-client",
-    "support": {
-        "issues": "https://github.com/Kimossii/license-client/issues",
-        "source": "https://github.com/Kimossii/license-client"
-    },
     "autoload": {
         "psr-4": {
             "LicenseClient\\": "src/"
